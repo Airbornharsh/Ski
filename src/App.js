@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from "react";
+import SearchComponents from "./assests/JavaScript/SearchComponents/SearchComponents";
+import Render from "./assests/JavaScript/Render/Render";
 
 function App() {
+  const [Data, setData] = useState("");
+
+  const onSearched = (data) => {
+    let finalData = "";
+    for (let i = 0; i < data.length; i++) {
+      if (data[i] !== " ") {
+        finalData += data[i];
+      }
+    }
+    if (finalData) {
+      finalData = finalData.toLowerCase();
+    }
+    setData(finalData.trim());
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchComponents onSearched={onSearched} />
+      <Render searched={Data} />
     </div>
   );
 }

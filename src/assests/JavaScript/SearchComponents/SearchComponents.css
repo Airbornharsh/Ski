@@ -1,0 +1,43 @@
+#search-components{
+    margin-top: 5rem;
+}
+
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#search input{
+    width: 20rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#search button{
+    width: 6rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+}
+
+#filter-container{
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#filter-container select{
+    width: 10rem;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    height: 2.5rem;
+}
+
+#filter-container select:hover{
+    background-color: rgb(255, 168, 7);
+}
