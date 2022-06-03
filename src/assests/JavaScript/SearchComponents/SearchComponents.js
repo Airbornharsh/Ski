@@ -9,10 +9,14 @@ const SearchComponents = (props) => {
     props.onSearched(data);
   };
 
+  const onFiltering = (data) => {
+    props.onFiltering(data);
+  };
+
   return (
     <div id="search-components">
       <Search onSearched={onSearched} />
-      <Filter />
+      <Filter onFiltering={onFiltering} />
     </div>
   );
 };

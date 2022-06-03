@@ -4,6 +4,7 @@ import Render from "./assests/JavaScript/Render/Render";
 
 function App() {
   const [Data, setData] = useState("");
+  const [filterKey, setFilterKey] = useState("all");
 
   const onSearched = (data) => {
     let finalData = "";
@@ -18,10 +19,14 @@ function App() {
     setData(finalData.trim());
   };
 
+  const onFiltering = (data) => {
+    setFilterKey(data);
+  };
+
   return (
     <div className="App">
-      <SearchComponents onSearched={onSearched} />
-      <Render searched={Data} />
+      <SearchComponents onSearched={onSearched} onFiltering={onFiltering} />
+      <Render searched={Data} filtered={filterKey} />
     </div>
   );
 }

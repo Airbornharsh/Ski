@@ -42,35 +42,120 @@
   border: 1px solid black;
 }
 
- #card-expand {
+#card-expand {
   display: none;
   position: fixed;
   height: 90vh;
   width: 90vw;
-  background-color: green;
+  background: linear-gradient(
+    to bottom right,
+    rgb(1, 117, 146),
+    rgb(2, 135, 169),
+    rgb(2, 149, 185),
+    rgb(2, 166, 207),
+    rgb(0, 186, 233),
+    rgb(2, 166, 207),
+    rgb(2, 149, 185),
+    rgb(2, 135, 169),
+    rgb(1, 117, 146)
+  );
   left: 50%;
   transform: translateX(-50%);
   top: 5vh;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+  box-shadow: 0 0 20px 1px black;
+  border-radius: 0.4rem;
 }
 
-#card-expand #close-read-more{
+#card-expand::-webkit-scrollbar {
+  width: 0;
+}
+
+#card-expand #close-read-more {
   background-color: blue;
   height: 3rem;
   width: 3rem;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
 }
 
-#card-expand img{
-  width: 10rem;
+#card-expand #close-read-more button {
+  height: 3rem;
+  width: 3rem;
+}
+
+#card-expand .container1 {
+  width: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  height: 80vh;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+
+#card-expand .container1 img {
+  width: 30rem;
   margin: 2rem 0 1rem 0;
 }
 
-#card-expand #close-read-more button{
-  height: 3rem;
-  width: 3rem;
+#card-expand .container2 {
+  width: 30rem;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 2;
+  margin: 0 1rem;
+}
+
+#card-expand .container2 h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+#card-expand .container2 ul {
+  width: 30rem;
+}
+
+#card-expand .container2 ul li {
+  text-align: left;
+  /* list-style: none; */
+}
+
+#card-expand .container2 ul li p {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 1137px) {
+  #card-expand .container1 {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #card-expand .container1 {
+    width: 80vw;
+  }
+
+  #card-expand .container1 img {
+    width: 80vw;
+  }
+
+  #card-expand .container2 {
+    width: 80vw;
+  }
+
+  #card-expand .container2 ul {
+    width: 80vw;
+  }
 }
