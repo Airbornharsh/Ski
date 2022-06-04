@@ -1,3 +1,5 @@
+import pic from "../../../../Images/Category/Development/gameDevelopment.jpg";
+
 const gameDevelopment = {
   name: "gamedevelopment",
   realName: "Game Development",
@@ -7,7 +9,7 @@ const gameDevelopment = {
   attitude: [],
   languages: [],
   softwares: [],
-  url: "",
+  url: pic,
 };
 
 export default gameDevelopment;

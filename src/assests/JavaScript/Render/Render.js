@@ -58,6 +58,7 @@ const Render = (props) => {
 
   return (
     <div id="render-container">
+      {<CardExpand data={cardExpandData} onCloseReadMore={closeReadMore} />}
       {searchRenderObjects.map((searchRenderObject) => (
         <Card
           key={searchRenderObject.name}
@@ -65,7 +66,6 @@ const Render = (props) => {
           onReadMore={readMore}
         />
       ))}
-      {<CardExpand data={cardExpandData} onCloseReadMore={closeReadMore} />}
     </div>
   );
 };

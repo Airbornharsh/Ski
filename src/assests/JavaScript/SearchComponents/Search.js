@@ -8,6 +8,10 @@ const Search = (props) => {
     props.onSearched(input);
   };
 
+  // const inputChangedBt = () => {
+  //   props.onSearched(input);
+  // };
+
   return (
     <div id="search">
       <input

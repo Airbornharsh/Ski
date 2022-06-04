@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import SearchComponents from "./assests/JavaScript/SearchComponents/SearchComponents";
 import Render from "./assests/JavaScript/Render/Render";
+import Logo from "./assests/JavaScript/Logo/Logo";
 
 function App() {
   const [Data, setData] = useState("");
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <Logo/>
       <SearchComponents onSearched={onSearched} onFiltering={onFiltering} />
       <Render searched={Data} filtered={filterKey} />
     </div>

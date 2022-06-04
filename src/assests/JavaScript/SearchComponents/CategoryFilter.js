@@ -9,9 +9,9 @@ const CategoryFilter = (props) => {
     <div className="category-container">
       <select onChange={categoryChange} placeholder="NONE">
         <option value="all">ALL</option>
+        <option value="art">ART</option>
         <option value="design">DESIGN</option>
         <option value="development">DEVELOPMENT</option>
-        <option value="art">ART</option>
       </select>
     </div>
   );

@@ -1,3 +1,5 @@
+import pic from "../../../../Images/Category/Development/appDevelopment.jpg";
+
 const appDevelopment = {
   name: "appdevelopment",
   realName: "App Development",
@@ -7,7 +9,7 @@ const appDevelopment = {
   attitude: [],
   languages: [],
   softwares: [],
-  url: "",
+  url: pic,
 };
 
 export default appDevelopment;

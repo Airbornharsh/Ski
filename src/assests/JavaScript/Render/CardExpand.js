@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CardNeed from "./CardNeed";
 
+import "./CardExpand.css";
+
 const CardExpand = (props) => {
+
   return (
     <div id="card-expand">
       <div className="container1">
@@ -23,7 +26,7 @@ const CardExpand = (props) => {
           onClick={() => {
             props.onCloseReadMore("none");
           }}
-        ></button>
+        >X</button>
       </div>
     </div>
   );

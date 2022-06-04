@@ -1,3 +1,5 @@
+import pic from "../../../../Images/Category/Design/productDesign.jpg";
+
 const productDesign = {
   name: "productdesign",
   realName: "Product Design",
@@ -6,7 +8,7 @@ const productDesign = {
   description: "",
   attitude: [],
   technology: [],
-  url: "",
+  url: pic,
 };
 
 export default productDesign;

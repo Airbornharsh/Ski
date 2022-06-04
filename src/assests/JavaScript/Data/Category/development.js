@@ -3,9 +3,9 @@ import gameDevelopment from "./development/gameDevelopment";
 import webDevelopment from "./development/webDevelopment";
 
 const development = {
-  webdevelopment: webDevelopment,
   appdevelopment: appDevelopment,
   gamedevelopment: gameDevelopment,
+  webdevelopment: webDevelopment,
 };
 
 export default development;
