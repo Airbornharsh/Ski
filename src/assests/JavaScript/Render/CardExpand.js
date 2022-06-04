@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import CardNeed from "./CardNeed";
 
 import "./CardExpand.css";
+import CardLinks from "./CardLinks";
 
 const CardExpand = (props) => {
 
@@ -20,6 +21,9 @@ const CardExpand = (props) => {
               );
             })
           : 0}
+        {props.data.links ? props.data.links.map((element) => {
+          return (<CardLinks key={element} data={props.data} linkParent={element}/>)
+        }):0}
       </div>
       <div id="close-read-more">
         <button

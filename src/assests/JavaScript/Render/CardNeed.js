@@ -3,7 +3,7 @@ import React from "react";
 const CardNeed = (props) => {
   return (
     <div>
-      <h3>{props.needed ? props.needed.toUpperCase() : 0}</h3>
+      <h3>{props.needed ? props.needed.toUpperCase() : ""}</h3>
       <ul>
         {props.data[props.needed]
           ? props.data[props.needed].map((element) => {
@@ -13,7 +13,7 @@ const CardNeed = (props) => {
                 </li>
               );
             })
-          : 0}
+          : ""}
       </ul>
     </div>
   );
