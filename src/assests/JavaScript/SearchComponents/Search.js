@@ -1,11 +1,9 @@
-import { React, useState } from "react";
+import { React} from "react";
 
 const Search = (props) => {
-  const [input, setInput] = useState("");
 
   const inputChanged = (event) => {
-    setInput(event.target.value);
-    props.onSearched(input);
+    props.onSearched(event.target.value);
   };
 
   // const inputChangedBt = () => {
@@ -17,7 +15,6 @@ const Search = (props) => {
       <input
         id="search-input"
         placeholder="Search Here"
-        value={input}
         onChange={inputChanged}
       />
       <button onClick={inputChanged} id="search-button">
